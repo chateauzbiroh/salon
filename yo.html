@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Radka Valentová | Profil & Ceník</title>
+  <meta name="description" content="Oficiální profil kadeřnice – telefonická rezervace, ceník služeb a informace.">
+  <style>
+    :root{
+      --accent:#0f77d6;     /* akcent můžeš kdykoli změnit */
+      --bg:#f6f7f9;
+      --text:#111;
+      --muted:#6b7280;
+      --card:#fff;
+      --border:#e7eaee;
+      --border-strong:#d9dee5;
+      --radius:18px;
+      --shadow:0 10px 28px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .container{max-width:980px;margin:auto;padding:24px}
+
+    /* HERO */
+    .hero{
+      background:var(--card); border:1.5px solid var(--border-strong); border-radius:var(--radius);
+      padding:22px; box-shadow:var(--shadow);
+    }
+    .hero-top{
+      display:grid; grid-template-columns:86px 1fr; gap:18px; align-items:center;
+    }
+    .avatar{
+      width:86px;height:86px;border-radius:50%;
+      background:url('https://chateauzbiroh.github.io/salon/IMG_6640.jpeg') center/cover no-repeat;
+      border:2px solid var(--border);
+    }
+    h1{margin:0 0 4px;font-size:1.75rem;line-height:1.2}
+    .subtitle{margin:0;color:var(--muted)}
+
+    /* CTA řádek – vše stejný styl + emoji */
+    .cta-row{margin-top:14px; display:flex; flex-wrap:wrap; gap:10px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border:1.5px solid var(--border-strong);
+      background:#fff; color:var(--text); text-decoration:none; font-weight:600;
+      border-radius:12px; transition:.2s transform,.2s background,.2s color,.2s border-color;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:var(--accent); background:var(--accent); color:#fff}
+    .emj{font-size:1.1em; line-height:1}
+
+    /* KARTY POD SEBOU */
+    .card{
+      background:var(--card); border:1.5px solid var(--border-strong); border-radius:var(--radius);
+      padding:18px; box-shadow:var(--shadow); margin-top:20px;
+    }
+    .card h2{margin:0 0 12px;font-size:1.2rem}
+
+    /* O MĚ */
+    .about p{margin:0 0 10px;color:#374151;line-height:1.65}
+
+    /* Accordion / Ceník */
+    .accordion{display:grid; gap:12px}
+    details{
+      border:1.5px solid var(--border); border-radius:14px; background:#fff; overflow:hidden;
+    }
+    summary{
+      cursor:pointer; list-style:none; padding:14px 16px; font-weight:800; position:relative;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::after{
+      content:"+"; position:absolute; right:14px; top:50%; transform:translateY(-50%); font-weight:900; color:#6b7280;
+    }
+    details[open] summary::after{content:"–"; color:var(--accent)}
+    .price-list{padding:0 16px 14px}
+    .row{
+      display:grid; grid-template-columns:1fr auto; gap:14px;
+      padding:12px 0; border-bottom:1px dashed var(--border);
+    }
+    .row:last-child{border-bottom:none}
+    .title{font-weight:700}
+    .desc{color:#374151; font-size:.95rem; margin-top:4px}
+    .duration{color:var(--muted); font-size:.9rem; margin-top:4px}
+    .price{white-space:nowrap; font-weight:800}
+    .meta{margin-top:10px; color:var(--muted); font-size:.9rem}
+
+    /* PARTNER */
+    .partners{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+      margin-top:22px; padding:14px 16px; border:1.5px solid var(--border-strong); border-radius:var(--radius);
+      background:#fff; box-shadow:var(--shadow);
+    }
+    .partners .logos{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+    .partners img{max-height:42px; object-fit:contain; filter:grayscale(100%)}
+    .partners a{color:var(--accent); text-decoration:none; font-weight:700}
+    .partners a:hover{text-decoration:underline}
+
+    /* RESPONSIVE */
+    @media (min-width:900px){
+      .hero-top{grid-template-columns:100px 1fr}
+      .avatar{width:100px;height:100px}
+      .cta-row{gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-top">
+        <div class="avatar" aria-label="Profilová fotografie"></div>
+        <div>
+          <h1>Radka Valentová </h1>
+          <p class="subtitle">Kadeřnictví • Dámské • Pánské • Péče a regenerace</p>
+        </div>
+      </div>
+
+      <!-- CTA řádek (vše stejné, emoji + text) -->
+      <div class="cta-row">
+        <a class="btn" href="tel:+420605027561"><span class="emj">📞</span> Zavolat: +420&nbsp;605&nbsp;027&nbsp;561</a>
+        <a class="btn" href="https://wa.me/420605027561" target="_blank" rel="noopener"><span class="emj">💬</span> WhatsApp</a>
+        <a class="btn" href="mailto:info@radkavalentovahair.cz"><span class="emj">✉️</span> E-mail</a>
+        <a class="btn" href="https://maps.app.goo.gl/GbaqequkPvHQqHoQ6" target="_blank" rel="noopener"><span class="emj">📍</span> Navigovat</a>
+        <a class="btn" href="https://www.instagram.com/radkavalentovahair/" target="_blank" rel="noopener"><span class="emj">📸</span> Instagram</a>
+        <a class="btn" href="https://radkavalentovahair.cz/salon/vcard.vcf" download><span class="emj">💾</span> Uložit vizitku (VCF)</a>
+        <a class="btn" href="tel:+420605027561"><span class="emj">💇‍♀️</span> Rezervovat po telefonu</a>
+      </div>
+    </section>
+
+    <!-- O MĚ (první pod sebou) -->
+    <article class="card about">
+      <h2>O mně</h2>
+      <p>
+        Vítám vás v mém salonu. Specializuji se na dámské i pánské střihy, blond techniky a šetrnou péči,
+        aby vlasy zůstaly zdravé a přirozeně krásné. Každou službu stavím na konzultaci a individuálním přístupu.
+      </p>
+      <p>
+        Pracuji s profesionální kosmetikou a technikami, které dlouhodobě přinášejí výsledky. Těším se na vaši návštěvu!
+      </p>
+    </article>
+
+    <!-- CENÍK (až druhý) -->
+    <article id="cenik" class="card">
+      <h2>Ceník služeb</h2>
+      <div class="accordion">
+        <details open>
+          <summary>Dámské / Women</summary>
+          <div class="price-list">
+            <div class="row">
+              <div>
+                <div class="title">Foukaná</div>
+                <div class="desc">Poradenství, mytí s masáží hlavy, regenerace, foukaná a styling</div>
+                <div class="duration">60 min</div>
+              </div>
+              <div class="price">990 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Potřebuji dobarvit bez střihu</div>
+                <div class="desc">Konzultace, poradenství, barva, tónování, mytí s masáží, regenerace, foukaná. Výběr z 4 JOI COLOR řad.</div>
+                <div class="duration">120 min</div>
+              </div>
+              <div class="price">2 980 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Potřebuji dobarvit a ostříhat</div>
+                <div class="desc">Účes na míru, barvení, mytí s masáží, střih a foukaní.</div>
+                <div class="duration">150 min</div>
+              </div>
+              <div class="price">3 640 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Společenský účes</div>
+                <div class="desc">Konzultace, poradenství, účes</div>
+                <div class="duration">60 min</div>
+              </div>
+              <div class="price">1 890 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Dámská trvalá</div>
+                <div class="desc">Ondulace pro kudrny/objem/texturu. (Cena včetně finální úpravy střihu)</div>
+                <div class="duration">150 min</div>
+              </div>
+              <div class="price">3 420 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Zesvětlení na blond (jakákoliv metoda)</div>
+                <div class="desc">Konzultace, zesvětlení, tónování, mytí s masáží, regenerace, úprava střihu, foukaná.</div>
+                <div class="duration">210 min</div>
+              </div>
+              <div class="price">4 950 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Dámský střih</div>
+                <div class="desc">Konzultace, mytí s masáží hlavy, regenerace, střih a foukaná</div>
+                <div class="duration">60 min</div>
+              </div>
+              <div class="price">1 890 Kč</div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Pánské / Men</summary>
+          <div class="price-list">
+            <div class="row">
+              <div>
+                <div class="title">Pánský střih</div>
+                <div class="desc">Konzultace, střih s mytím, masáž hlavy, kontury, úprava obočí, odstranění chloupků strojkem, styling</div>
+                <div class="duration">60 min</div>
+              </div>
+              <div class="price">990 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Pánský střih + Cover 5 + Aminexil ampule</div>
+                <div class="desc">Diskrétní překrytí šedin. Aminexil podporuje hustotu a omezuje vypadávání.</div>
+                <div class="duration">90 min</div>
+              </div>
+              <div class="price">1 650 Kč</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="title">Pánská trvalá</div>
+                <div class="desc">Poradenství, mytí, trvalá, regenerace, střih</div>
+                <div class="duration">120 min</div>
+              </div>
+              <div class="price">2 260 Kč</div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Ostatní</summary>
+          <div class="price-list">
+            <div class="row">
+              <div>
+                <div class="title">Střih + vlasová kúra</div>
+                <div class="desc">JOICO K-Pak Hair Repair System – profi 4kroková kúra. Cena včetně střihu a závěrečného foukaní.</div>
+                <div class="duration">90 min</div>
+              </div>
+              <div class="price">2 450 Kč</div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="title">Zinzino BalanceTest – poměr omega-6 : omega-3</div>
+                <div class="desc">Domácí test (Vitas, Norsko), osobní report ~20 dní, doporučení na míru. Premier cena 3 325 Kč (registrace v salonu).</div>
+                <div class="duration">30 min</div>
+              </div>
+              <div class="price">2 325 Kč</div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <p class="meta">Ceny jsou orientační; mohou se lišit dle délky/objemu vlasů a spotřeby materiálu. Poslední aktualizace: 8. 10. 2025.</p>
+      <div class="cta-row" style="margin-top:8px">
+        <a class="btn" href="tel:+420605027561"><span class="emj">💇‍♀️</span> Rezervovat po telefonu: +420&nbsp;605&nbsp;027&nbsp;561</a>
+      </div>
+    </article>
+
+    <!-- PARTNER -->
+    <section class="partners">
+      <div class="logos">
+        <img src="https://chateauzbiroh.github.io/salon/alfaparf-milano-professional-logo_600x278.png" alt="Alfaparf Milano Professional">
+      </div>
+      <div>
+        Partner: <a href="https://www.instagram.com/alfaparfmilanopro/" target="_blank" rel="noopener">@alfaparfmilanopro</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HairSalon",
+    "name":"Radka Valentová Hair",
+    "url":"https://radkavalentovahair.cz",
+    "telephone":"+420605027561",
+    "sameAs":["https://www.instagram.com/radkavalentovahair/"],
+    "priceRange":"€€"
+  }
+  </script>
+</body>
+</html>
